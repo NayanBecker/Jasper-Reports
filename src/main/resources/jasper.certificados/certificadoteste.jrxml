@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="certificadoteste" pageWidth="842" pageHeight="570" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="49c21bcd-9e8c-4d5c-b1c4-de96d76edb5e">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="nome" class="java.lang.String"/>
+	<parameter name="curso" class="java.lang.String"/>
+	<parameter name="cargaHoraria" class="java.lang.Integer"/>
+	<parameter name="dataInicioCurso" class="java.util.Date"/>
+	<parameter name="dataTerminoCurso" class="java.util.Date"/>
+	<parameter name="imageJasper" class="java.lang.Object"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="570" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="0" y="0" width="842" height="570" uuid="0ff5c37d-aef4-4f6d-9ff8-d5ad71574d59"/>
+				<imageExpression><![CDATA[$P{imageJasper}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="71" y="90" width="700" height="80" uuid="0a27d076-e724-4af0-a31f-2ab827ade9e5"/>
+				<textElement textAlignment="Center">
+					<font size="58" isBold="false"/>
+				</textElement>
+				<text><![CDATA[CERTIFICADO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="151" y="240" width="540" height="2" forecolor="rgba(3, 3, 3, 0.0)" backcolor="#0044FF" uuid="3ea8d6fc-b66b-4bb3-8b21-2d0cdba3580a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</rectangle>
+			<textField>
+				<reportElement x="170" y="198" width="499" height="37" uuid="f6df07ae-05de-4581-a994-cf67647a41a8"/>
+				<textElement textAlignment="Center">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="131" y="290" width="580" height="70" uuid="0c01daa8-63fc-4b8b-b673-a29423a8f975"/>
+				<textElement textAlignment="Center">
+					<font size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Concluio com êxito o curso de " + $P{curso} + ", totalizando" + $P{cargaHoraria} + "horas de estudo. Este curso teve início em " + $P{dataInicioCurso} + "e concluiu-se em" + $P{dataTerminoCurso}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

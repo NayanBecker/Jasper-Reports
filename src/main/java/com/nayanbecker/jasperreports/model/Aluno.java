@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Aluno {
     
-    private String name;
+    private String nome;
     private String curso;
     private Integer cargaHoraria;
     private Date dataInicioCurso;
