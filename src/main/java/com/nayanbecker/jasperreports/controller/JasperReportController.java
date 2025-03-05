@@ -1,6 +1,6 @@
 package com.nayanbecker.jasperreports.controller;
 
-import java.io.FileNotFoundException;
+import java.io.IOException;
 
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,7 +21,7 @@ public class JasperReportController {
     }
 
     @PostMapping("/gerar-certificado")
-    public void gerar(@RequestBody Aluno aluno) throws FileNotFoundException {
+    public void gerar(@RequestBody Aluno aluno) throws IOException {
         this.jasperResportService.gerar(aluno);
     }
 }
